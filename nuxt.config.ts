@@ -131,7 +131,7 @@ export default defineNuxtConfig({
       mode: "out-in",
     },
     head: {
-      title: 'Nuxt 4 Boilerplate', // default fallback title
+      title: 'The Morris Essex Visibility Brigade: Resistance is Possible', // default fallback title
       htmlAttrs: {
         lang: 'en',
       },
