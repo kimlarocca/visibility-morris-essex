@@ -1,3 +1,5 @@
 <template>
-  <img src="https://placehold.co/150x70?text=logo" alt="logo" class="rounded-border" />
+  <NuxtLink to="/" class="plain clickable" aria-label="home">
+    <p class="like-h4">{{ companyName }}</p>
+  </NuxtLink>
 </template>

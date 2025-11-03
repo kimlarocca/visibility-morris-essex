@@ -1,14 +1,10 @@
 <script setup>
 const { setDarkMode, setLightMode, isDarkMode } = useDarkMode()
-const navigationItems = [
-  { label: "Hash Link", href: "/", hash: "#content" },
-  { label: "Styleguide", href: "/styleguide", hash: "" },
-]
 const visible = ref(false)
 </script>
 
 <template>
-  <div class="container p-4">
+  <div class="container px-4 py-6">
     <header class="flex justify-between items-center">
       <NuxtLink to="/" class="plain clickable" aria-label="home">
         <Logo />
@@ -21,7 +17,7 @@ const visible = ref(false)
         />
         <i v-else @click="setDarkMode" class="pi pi-moon text-lg clickable mr-3" />
         <i
-          v-if="navigationItems"
+          v-if="navigationLinks"
           class="pi pi-bars text-2xl clickable"
           @click="visible = !visible"
           aria-label="Toggle navigation menu"
