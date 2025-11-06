@@ -14,7 +14,7 @@
       </div>
     </section>
     <section class="highlight p-32" id="get-involved">
-      <div class="grid lg:grid-cols-2 gap-16">
+      <div class="container grid lg:grid-cols-2 gap-16">
         <div>
           <a :href="newMemberFormUrl" target="_blank" rel="nofollow noreferrer">
             <img
@@ -64,7 +64,7 @@
       <div
         class="elfsight-app-d78d4cd5-eb6b-4fcc-a63a-2f9efc2a2393"
         data-elfsight-app-lazy
-      ></div>
+      />
     </section>
     <section class="py-16" id="get-involved">
       <div class="container p-4">
