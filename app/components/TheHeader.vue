@@ -1,48 +1,46 @@
 <script setup>
-const { setDarkMode, setLightMode, isDarkMode } = useDarkMode()
 const visible = ref(false)
 </script>
 
 <template>
-  <div class="container px-4 py-6">
-    <header class="flex justify-between items-center">
-      <NuxtLink to="/" class="plain clickable" aria-label="home">
-        <Logo />
-      </NuxtLink>
-      <div class="flex justify-between items-center">
-        <i
-          v-if="isDarkMode"
-          @click="setLightMode"
-          class="pi pi-sun text-lg clickable mr-3"
-        />
-        <i v-else @click="setDarkMode" class="pi pi-moon text-lg clickable mr-3" />
+  <header class="rounded-lg">
+    <div class="flex justify-between items-center py-6">
+      <Logo />
+      <div class="bg-black p-5 rounded-lg flex justify-between items-center">
         <i
           v-if="navigationLinks"
-          class="pi pi-bars text-2xl clickable"
+          class="pi pi-bars text-xl text-white clickable"
           @click="visible = !visible"
           aria-label="Toggle navigation menu"
         />
       </div>
-    </header>
-    <Drawer v-model:visible="visible" position="right">
-      <NuxtLink to="/" class="plain clickable" aria-label="home">
-        <Logo class="mb-8" />
-      </NuxtLink>
-      <p v-for="item in navigationItems" class="mb-4">
-        <NuxtLink
-          :key="item.label"
-          :to="item.href + item.hash"
-          class="font-medium decoration-none"
-          @click="visible = false"
-        >
-          {{ item.label }}
+      <Drawer v-model:visible="visible" position="right" class="bg-black border-0">
+        <NuxtLink to="/" class="plain clickable" aria-label="home">
+          <Logo class="minimal mb-8" />
         </NuxtLink>
-      </p>
-    </Drawer>
-  </div>
+        <p v-for="item in navigationLinks" class="mb-4">
+          <NuxtLink
+            :key="item.label"
+            :to="item.href + item.hash"
+            class="font-medium decoration-none text-white"
+            @click="visible = false"
+          >
+            {{ item.label }}
+          </NuxtLink>
+        </p>
+      </Drawer>
+    </div>
+  </header>
 </template>
 
 <style lang="scss">
+header {
+  position: absolute;
+  z-index: 10;
+  top: 1.5rem;
+  left: 1.75rem;
+  right: 1.75rem;
+}
 .p-drawer-header button {
   color: var(--p-button-primary-color) !important;
   background: var(--p-button-primary-background) !important;

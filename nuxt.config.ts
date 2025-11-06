@@ -44,10 +44,10 @@ const MyPreset = definePreset(Aura, {
           background: '#ffffff', // light mode background color
         },
         primary: {
-          color: '{sky.800}',
+          color: '{sky.500}',
           inverseColor: '{surface.0}',
-          hoverColor: '{sky.700}',
-          activeColor: '{sky.500}'
+          hoverColor: '{sky.300}',
+          activeColor: '{sky.300}'
         },
         highlight: {
           background: '{sky.50}',
@@ -70,20 +70,6 @@ const MyPreset = definePreset(Aura, {
           background: '{surface.950}',
         },
       }
-    },
-  },
-  button: {
-    colorScheme: {
-      light: {
-        outlined: {
-          primary: {
-            hoverBackground: '{red.50}',
-            activeBackground: '{red.100}',
-            borderColor: '{red.200}',
-            color: '{red.500}'
-          },
-        },
-      },
     },
   },
   components: {
@@ -152,9 +138,9 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com'
         }
       ],
-      // script: [
-      //   { src: 'https://www.googletagmanager.com/gtag/js?id=G-7GDC05EZKE' }
-      // ]
+      script: [
+        { src: 'https://elfsightcdn.com/platform.js' }
+      ]
     }
   },
 })

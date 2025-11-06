@@ -46,6 +46,17 @@ a {
     margin: auto;
 }
 
+.background-color {
+    background-color: var(--p-content-background);
+}
+
+.text-color {
+    color: var(--p-text-color);
+}
+.inverse-text-color {
+    color: var(--p-primary-inverse-color);
+}
+
 .contrast,
 .contrast h1,
 .contrast h2,
@@ -91,6 +102,16 @@ a {
 }
 
 // primevue overrides
+.p-button {
+    padding: 0.5rem 2rem !important;
+}
 .p-button-label {
     text-transform: uppercase !important;
+    font-weight: 600 !important;
+    color: black !important;
+}
+
+// hide first instagram embed
+.tb-qr-card:first-of-type {
+    display: none;
 }
