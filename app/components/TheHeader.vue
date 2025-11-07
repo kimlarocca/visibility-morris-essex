@@ -4,7 +4,7 @@ const visible = ref(false)
 
 <template>
   <header class="rounded-lg">
-    <div class="flex justify-between items-center py-6">
+    <div class="flex justify-between gap-4 items-center">
       <Logo />
       <div class="bg-black p-5 rounded-lg flex justify-between items-center">
         <i
@@ -38,8 +38,8 @@ header {
   position: absolute;
   z-index: 10;
   top: 1.5rem;
-  left: 1.75rem;
-  right: 1.75rem;
+  left: 1.5rem;
+  right: 1.5rem;
 }
 .p-drawer-header button {
   color: var(--p-button-primary-color) !important;

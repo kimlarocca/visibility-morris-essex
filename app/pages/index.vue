@@ -2,9 +2,9 @@
   <div>
     <section class="hero">
       <div class="p-6 h-full flex flex-col justify-between">
-        <h1 class="text-white">{{ tagline }}</h1>
+        <h1 class="text-white mb-12">{{ tagline }}</h1>
         <div class="mb-12">
-          <p class="mb-6 text-2xl font-semibold text-white">
+          <p class="mb-6 text-xl sm:text-2xl font-semibold text-white">
             {{ description }}
           </p>
           <NuxtLink :to="ctaLink" class="mr-3">
@@ -103,16 +103,13 @@
 </template>
 
 <style lang="scss">
-h1 {
-  max-width: 1000px;
-  margin-top: 150px;
-}
 .hero {
   background: url("/images/hero.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
+  min-height: fit-content;
   p {
-    max-width: 600px;
+    max-width: 800px;
   }
 }
 .eapps-instagram-feed-posts-item {
