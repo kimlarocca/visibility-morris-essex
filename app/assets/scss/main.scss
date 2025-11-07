@@ -28,15 +28,21 @@ img {
 }
 
 a {
-    color: var(--p-primary-color);
+    color: var(--p-text-color);
     text-decoration: none;
+    border-bottom: solid 2px var(--p-text-color);
     -webkit-touch-callout: none; /* disable the iOS long press action */
     -webkit-user-select: none; /* disable text selection */
+    transition: var(--transition);
+    opacity: 1;
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
+        border-bottom: solid 2px var(--p-text-color);
+        opacity: var(--opacity-on-hover);
     }
     &.plain {
-        text-decoration: none;
+        text-decoration: none !important;
+        border-bottom: none !important;
     }
 }
 
@@ -67,6 +73,11 @@ a {
 .contrast p {
     background: var(--p-text-color);
     color: var(--p-primary-inverse-color);
+}
+.contrast a,
+.inverse a {
+    color: var(--p-primary-inverse-color);
+    border-bottom: solid 1px var(--p-primary-inverse-color);
 }
 
 .highlight {
@@ -108,10 +119,20 @@ a {
 .p-button-label {
     text-transform: uppercase !important;
     font-weight: 600 !important;
-    color: black !important;
+    font-size: 1.25rem !important;
+    color: white !important;
 }
 
-// hide first instagram embed
-.tb-qr-card:first-of-type {
-    display: none;
+.p-button.white {
+    background-color: white !important;
+    border-color: white !important;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
+    transition: var(--transition);
+    opacity: 1;
+    &:hover {
+        opacity: var(--opacity-on-hover);
+    }
+    .p-button-label {
+        color: black !important;
+    }
 }

@@ -6,14 +6,12 @@ const visible = ref(false)
   <header class="rounded-lg">
     <div class="flex justify-between gap-4 items-center">
       <Logo />
-      <div class="bg-black p-5 rounded-lg flex justify-between items-center">
-        <i
-          v-if="navigationLinks"
-          class="pi pi-bars text-xl text-white clickable"
-          @click="visible = !visible"
-          aria-label="Toggle navigation menu"
-        />
-      </div>
+      <i
+        v-if="navigationLinks"
+        class="bg-black p-4 rounded-full pi pi-bars text-xl text-white clickable"
+        @click="visible = !visible"
+        aria-label="Toggle navigation menu"
+      />
       <Drawer v-model:visible="visible" position="right" class="bg-black border-0">
         <NuxtLink to="/" class="plain clickable" aria-label="home">
           <Logo class="minimal mb-8" />

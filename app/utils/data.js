@@ -14,6 +14,7 @@ export const ctaLink = newMemberFormUrl
 
 export const navigationLinks = [
     { label: "About Us", href: "/", hash: "#about-us", target: "" },
+    { label: "Photo Gallery", href: "/", hash: "#gallery", target: "" },
     { label: "Get Involved", href: "/", hash: "#get-involved", target: "" },
     { label: "Join Us Today", href: newMemberFormUrl, hash: "", target: "_blank" },
 ]

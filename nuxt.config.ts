@@ -44,13 +44,13 @@ const MyPreset = definePreset(Aura, {
           background: '#ffffff', // light mode background color
         },
         primary: {
-          color: '{sky.500}',
+          color: '{surface.950}',
           inverseColor: '{surface.0}',
           hoverColor: '{sky.300}',
           activeColor: '{sky.300}'
         },
         highlight: {
-          background: '{sky.50}',
+          background: '{sky.700}',
         },
       },
       dark: {

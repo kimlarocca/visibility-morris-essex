@@ -15,7 +15,7 @@
     font-family: var(--font-family);
     font-optical-sizing: auto;
     letter-spacing: normal;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   p {
@@ -49,22 +49,26 @@
       line-height: 100px;
     }
     @screen lg {
-      font-size: 120px;
-      line-height: 120px;
+      font-size: 110px;
+      line-height: 110px;
     }
     @screen xl {
-      font-size: 130px;
-      line-height: 130px;
+      font-size: 120px;
+      line-height: 120px;
     }
   }
 
   h2,
   .like-h2 {
     font-family: var(--font-family-header);
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 50px;
+    line-height: 50px;
     font-weight: 600;
     text-transform: uppercase;
+    @screen md {
+      font-size: 80px;
+      line-height: 80px;
+    }
     @screen lg {
       font-size: 100px;
       line-height: 100px;
